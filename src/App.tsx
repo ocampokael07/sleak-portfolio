@@ -70,15 +70,16 @@ function App() {
 
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
             Michael Ocampo
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-              Full Stack Engineer
+            <span className="block text-lg md:text-xl font-medium mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              Full Stack Developer • CRM & eCommerce
             </span>
           </h1>
 
           <p className="text-gray-400 max-w-lg mb-10">
-            I design and build fast, accessible, and highly interactive web
-            experiences using modern technologies, focusing on performance,
-            security, scalability, and exceptional user experience.
+            I build scalable web applications using .NET Core, React, and
+            TypeScript while also creating CRM and automation solutions for lead
+            management, integrations, and business workflows. Focused on
+            performance, security, and systems that help businesses grow.
           </p>
 
           <div className="flex gap-4">
@@ -117,16 +118,26 @@ function App() {
 
       {/* Social Dock */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-6 px-6 py-3 bg-[#121625]/80 backdrop-blur rounded-full border border-white/10 z-50">
-        <a href="#" className="hover:text-cyan-400">
+        {/* <a href="#" className="hover:text-cyan-400">
           <Twitter size={18} />
-        </a>
-        <a href="#" className="hover:text-cyan-400">
+        </a> */}
+        <a
+          href="https://www.linkedin.com/in/michael-ocampo-53777516a"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-cyan-400"
+        >
           <Linkedin size={18} />
         </a>
-        <a href="#" className="hover:text-cyan-400">
+        <a
+          href="https://github.com/ocampokael07"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-cyan-400"
+        >
           <Github size={18} />
         </a>
-        <a href="#contact" className="hover:text-cyan-400">
+        <a href="mailto:ocampokael07@gmail.com" className="hover:text-cyan-400">
           <Mail size={18} />
         </a>
       </div>
@@ -139,171 +150,6 @@ function App() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          {/* <div className="relative bg-gradient-to-br from-[#141826] to-[#0f1220] rounded-3xl p-8 border border-white/10 shadow-2xl">
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
-
-            <div className="relative space-y-4">
-              <h3 className="text-xl font-semibold">Current Stack</h3>
-
-              <div className="flex flex-wrap gap-3 text-sm">
-                {[
-                  "React",
-                  "TypeScript",
-                  "JavaScript",
-                  ".NET Core",
-                  "ASP.NET Web API",
-                  "Hangfire",
-                  "SignalR",
-                  "ServiceNow API",
-                  "PingOne SSO",
-                  "OneLogin SSO",
-                  "Okta SSO",
-                  "Power Platform",
-                  "SQL Server",
-                  "MySQL",
-                  "AWS S3",
-                  "Azure",
-                  "Git",
-                  "REST APIs",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-cyan-400/40 transition"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div> */}
-          {/* <div className="relative bg-gradient-to-br from-[#141826] to-[#0f1220] rounded-3xl p-8 border border-white/10 shadow-2xl">
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
-
-            <div className="relative space-y-6">
-              <h3 className="text-xl font-semibold">Technical Skills</h3>
- 
-              <div>
-                <h4 className="text-sm font-semibold text-cyan-400 mb-2">
-                  Frontend
-                </h4>
-
-                <div className="flex flex-wrap gap-2 text-sm">
-                  {[
-                    "React",
-                    "TypeScript",
-                    "JavaScript",
-                    "Tailwind CSS",
-                    "Responsive Design",
-                    "Accessibility (WCAG)",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-cyan-400/40 transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
- 
-              <div>
-                <h4 className="text-sm font-semibold text-purple-400 mb-2">
-                  Backend
-                </h4>
-
-                <div className="flex flex-wrap gap-2 text-sm">
-                  {[
-                    ".NET Core",
-                    "ASP.NET Web API",
-                    "Hangfire",
-                    "SignalR",
-                    "REST APIs",
-                    "Windows Services",
-                    "Authentication & Authorization",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-purple-400/40 transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
- 
-              <div>
-                <h4 className="text-sm font-semibold text-pink-400 mb-2">
-                  Security & SSO
-                </h4>
-
-                <div className="flex flex-wrap gap-2 text-sm">
-                  {[
-                    "PingOne SAML",
-                    "OneLogin SSO",
-                    "Okta SSO",
-                    "OAuth 2.0",
-                    "JWT",
-                    "Role-Based Access",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-pink-400/40 transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
- 
-              <div>
-                <h4 className="text-sm font-semibold text-green-400 mb-2">
-                  Cloud & Data
-                </h4>
-
-                <div className="flex flex-wrap gap-2 text-sm">
-                  {[
-                    "Azure",
-                    "AWS S3",
-                    "SQL Server",
-                    "MySQL",
-                    "Database Design",
-                    "ETL & File Processing",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-green-400/40 transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
- 
-              <div>
-                <h4 className="text-sm font-semibold text-yellow-400 mb-2">
-                  Tools & Platform
-                </h4>
-
-                <div className="flex flex-wrap gap-2 text-sm">
-                  {[
-                    "Git",
-                    "Azure DevOps",
-                    "CI/CD",
-                    "Power Platform",
-                    "ServiceNow API",
-                    "Agile / Scrum",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-yellow-400/40 transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="relative bg-gradient-to-br from-[#141826] to-[#0f1220] rounded-3xl p-8 border border-white/10 shadow-2xl">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
 
@@ -469,21 +315,22 @@ function App() {
           transition={{ delay: 0.2 }}
           className="text-gray-400 leading-relaxed text-lg"
         >
-          I’m a Software Engineer specializing in .NET Core and React
-          (TypeScript), with strong experience in building scalable, modular web
-          applications and enterprise systems. I develop feature-based modules
-          based on business requirements using .NET Core and React, and
-          implement background automation with Hangfire. I have created Windows
-          Services for high-volume file processing, handling thousands of files
-          daily and storing structured data in databases. I am experienced in
-          building real-time applications using SignalR and in creating
-          comprehensive technical documentation, including a responsive
-          web-based user guide for our application, DataRadar. I have hands-on
-          experience integrating SAML SSO solutions such as PingOne, OneLogin,
-          and Okta, as well as connecting enterprise data sources including SQL
-          Server, AWS S3, and MySQL. Overall, I have strong expertise in
-          designing, developing, and maintaining modern web applications using
-          the .NET Core and React (TypeScript/JavaScript) technology stack.
+          I’m a Full Stack Developer specializing in .NET Core and React
+          (TypeScript), with experience building scalable, secure, and modular
+          web applications for enterprise environments. I develop feature-based
+          systems based on business requirements, including API integrations,
+          authentication, and real-time applications using SignalR. I also
+          implement background processing and automation using Hangfire, along
+          with Windows Services for high-volume file processing and data
+          handling. I have hands-on experience with SAML SSO integrations
+          (PingOne, OneLogin, Okta) and working with enterprise data sources
+          such as SQL Server, AWS S3, and MySQL. In addition, I’ve built
+          internal tools and documentation platforms, including a responsive
+          web-based guide for some of my previous projects. Alongside full stack
+          development, I also work with CRM and automation tools (GHL, HubSpot,
+          Shopify basics), focusing on integrations, workflows, and improving
+          business processes. Overall, I focus on building reliable systems that
+          are secure, scalable, and aligned with real business needs.
         </motion.p>
       </section>
 
@@ -503,27 +350,24 @@ function App() {
           {[
             {
               title: "DataRadar",
-              desc: "Worked as a Full Stack Developer focusing on authentication, SAML SSO integration, and connecting multiple enterprise data sources for secure and scalable access.",
+              desc: "Worked as a Full Stack Developer using .NET Core, React, and TypeScript. Focused on building secure authentication flows, implementing SAML SSO (Okta, OneLogin), and integrating multiple enterprise data sources. Developed scalable APIs and improved system performance for secure, real-time data access.",
               url: "https://www.dataradar.io/",
               private: false,
+              image: "/images/DataRadar.png",
             },
             {
               title: "DataRadar Documentation Portal",
-              desc: "Designed and maintained a secure, module-based documentation web application for DataRadar, using shared-token authentication and seamless integration with the main platform.",
+              desc: "Designed and developed a modular documentation portal using React and .NET Core. Implemented secure shared-token authentication, dynamic content modules, and seamless integration with the main DataRadar platform to ensure consistent and secure user access.",
               url: "https://www.dataradar.io/",
               private: true,
+              image: "/images/DataRadar.png",
             },
             {
               title: "Confie Inquiry Portal (Internal System)",
-              desc: "Full-stack development of a private enterprise inquiry management system using .NET Core and React, including authentication, workflow automation, and reporting modules.",
+              desc: "Built a full-stack internal system using .NET Core, React, and TypeScript for managing enterprise inquiries. Implemented authentication, role-based access control, workflow automation, and reporting features to streamline internal operations and improve data visibility.",
               url: "#",
               private: true,
-            },
-            {
-              title: "Enterprise Web App",
-              desc: "Built a full-stack React and .NET Core system with secure authentication, scalable APIs, and modular architecture.",
-              url: "https://your-enterprise-app.com",
-              private: false,
+              image: "/images/ConfieIQ.png",
             },
           ].map((item, index) => (
             <motion.div
@@ -531,14 +375,29 @@ function App() {
               whileHover={{ y: -8 }}
               className="group relative bg-[#121625] rounded-2xl p-6 border border-white/10 hover:border-cyan-400/40 transition"
             >
-              {/* Thumbnail / Banner */}
-              <div className="h-40 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 mb-5" />
+              {/* Thumbnail */}
+              <div className="h-40 mb-5 overflow-hidden rounded-xl">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              </div>
 
               {/* Title */}
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
 
-              {/* Description */}
-              <p className="text-sm text-gray-400 mb-4">{item.desc}</p>
+              {/* Description with clamp + tooltip */}
+              <div className="relative group/desc mb-4">
+                <p className="text-sm text-gray-400 line-clamp-2 cursor-default">
+                  {item.desc}
+                </p>
+
+                {/* Tooltip */}
+                <div className="absolute left-0 top-full mt-2 w-64 p-3 text-xs text-white bg-black/90 rounded-lg opacity-0 group-hover/desc:opacity-100 transition pointer-events-none z-20 shadow-lg">
+                  {item.desc}
+                </div>
+              </div>
 
               {/* Action Button */}
               <a
