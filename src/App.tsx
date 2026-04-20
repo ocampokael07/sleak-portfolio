@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { ArrowRight, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
 function App() {
   const [showTop, setShowTop] = useState(false);
