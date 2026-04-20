@@ -556,7 +556,7 @@ function App() {
 
         <motion.a
           whileHover={{ scale: 1.05 }}
-          href="mailto:youremail@example.com"
+          href="mailto:ocampokael07@gmail.com"
           className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-medium shadow-lg"
         >
           <Mail size={18} /> Get in Touch
