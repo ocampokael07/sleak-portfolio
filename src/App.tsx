@@ -7,7 +7,13 @@ import { ArrowRight, Github, Linkedin, Twitter, Mail } from "lucide-react";
 function App() {
   const [showTop, setShowTop] = useState(false);
   const [activeSkill, setActiveSkill] = useState<
-    "all" | "frontend" | "backend" | "security" | "cloud" | "tools"
+    | "all"
+    | "frontend"
+    | "backend"
+    | "security"
+    | "cloud"
+    | "tools"
+    | "ecommerce"
   >("all");
 
   useEffect(() => {
@@ -313,6 +319,7 @@ function App() {
                   { id: "security", label: "SSO" },
                   { id: "cloud", label: "Cloud" },
                   { id: "tools", label: "Tools" },
+                  { id: "ecommerce", label: "eCommerce / CRM" },
                 ].map((filter) => (
                   <button
                     key={filter.id}
@@ -416,6 +423,24 @@ function App() {
                     <span
                       key={skill}
                       className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-yellow-400/40 transition"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                {/* eCommerce / CRM */}
+                {(activeSkill === "all" || activeSkill === "ecommerce") &&
+                  [
+                    "Shopify (Theme Customization, Liquid Basics)",
+                    "Shopify App Integration",
+                    "GoHighLevel (GHL) Automation Basics",
+                    "CRM & Funnel Setup (GHL)",
+                    "HubSpot (CRM & Workflows Basics)",
+                    "Email Marketing Automation",
+                    "Lead Management",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-orange-400/40 transition"
                     >
                       {skill}
                     </span>
