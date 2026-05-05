@@ -6,6 +6,7 @@ import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
 function App() {
   const [showTop, setShowTop] = useState(false);
+  const [triggerRipple, setTriggerRipple] = useState(false);
   const [activeSkill, setActiveSkill] = useState<
     | "all"
     | "frontend"
@@ -14,6 +15,7 @@ function App() {
     | "cloud"
     | "tools"
     | "ecommerce"
+    | "webflow"
   >("all");
 
   useEffect(() => {
@@ -28,16 +30,21 @@ function App() {
   return (
     <div className="min-h-screen bg-[#0a0d14] text-white overflow-hidden">
       {/* Gradient Orbs Background */}
-      <div className="absolute inset-y-0 right-0 w-[35%] hidden lg:flex items-center justify-center">
-        <div className="relative">
+      <div className="absolute inset-y-0 right-0 w-[35%] hidden lg:flex items-center justify-center overflow-hidden">
+        <div className="relative group">
           {/* Glow */}
-          <div className="absolute inset-0 bg-cyan-500/40 blur-3xl rounded-full scale-125" />
+          <div className="absolute inset-0 bg-cyan-500/30 blur-3xl rounded-full scale-125 pointer-events-none" />
+
+          {/* Ripple */}
+          <span className="ripple" />
+          <span className="ripple delay-200" />
+          <span className="ripple delay-400" />
 
           {/* Profile Image */}
           <img
             src="/images/MyPic.jpg"
             alt="Michael Ocampo"
-            className="relative w-80 h-80 xl:w-96 xl:h-96 rounded-full object-cover border-4 border-cyan-400 shadow-2xl"
+            className="relative w-80 h-80 xl:w-96 xl:h-96 rounded-full object-cover border-4 border-cyan-400 shadow-2xl transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       </div>
@@ -71,15 +78,21 @@ function App() {
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
             Michael Ocampo
             <span className="block text-lg md:text-xl font-medium mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-              Full Stack Developer • CRM & eCommerce
+              Full Stack Developer • Webflow Developer • CRM & eCommerce
             </span>
           </h1>
 
           <p className="text-gray-400 max-w-lg mb-10">
-            I build scalable web applications using .NET Core, React, and
-            TypeScript while also creating CRM and automation solutions for lead
-            management, integrations, and business workflows. Focused on
-            performance, security, and systems that help businesses grow.
+            I build responsive, high-performing websites using Webflow, React,
+            and TypeScript, while also creating CRM and automation solutions for
+            lead management, integrations, and business workflows. Focused on
+            clean UI, performance, and systems that help businesses grow.I build
+            responsive, high-performing websites using Webflow, React, and
+            TypeScript, backed by solid experience in .NET Core and API
+            development. I develop scalable backend systems, integrations, and
+            automation solutions for CRM, lead management, and business
+            workflows. Focused on clean UI, performance, and reliable end-to-end
+            solutions that help businesses grow.
           </p>
 
           <div className="flex gap-4">
@@ -161,6 +174,7 @@ function App() {
                 {[
                   { id: "all", label: "All" },
                   { id: "frontend", label: "Frontend" },
+                  { id: "webflow", label: "Webflow" },
                   { id: "backend", label: "Backend" },
                   { id: "security", label: "SSO" },
                   { id: "cloud", label: "Cloud" },
@@ -186,12 +200,33 @@ function App() {
                 {/* Frontend */}
                 {(activeSkill === "all" || activeSkill === "frontend") &&
                   [
+                    "Webflow",
                     "React",
                     "TypeScript",
                     "JavaScript",
                     "Tailwind CSS",
                     "Responsive Design",
                     "Accessibility (WCAG)",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-cyan-400/40 transition"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+
+                {/* Webflow */}
+                {(activeSkill === "all" || activeSkill === "webflow") &&
+                  [
+                    "Webflow Development",
+                    "Webflow CMS (Collections)",
+                    "Dynamic Content Binding",
+                    "Figma to Webflow",
+                    "Responsive Design (Webflow)",
+                    "Flexbox & Grid (Webflow)",
+                    "Webflow Interactions & Animations",
+                    "SEO Basics (Webflow)",
                   ].map((skill) => (
                     <span
                       key={skill}
@@ -273,6 +308,7 @@ function App() {
                       {skill}
                     </span>
                   ))}
+
                 {/* eCommerce / CRM */}
                 {(activeSkill === "all" || activeSkill === "ecommerce") &&
                   [
@@ -315,22 +351,25 @@ function App() {
           transition={{ delay: 0.2 }}
           className="text-gray-400 leading-relaxed text-lg"
         >
-          I’m a Full Stack Developer specializing in .NET Core and React
-          (TypeScript), with experience building scalable, secure, and modular
-          web applications for enterprise environments. I develop feature-based
-          systems based on business requirements, including API integrations,
-          authentication, and real-time applications using SignalR. I also
-          implement background processing and automation using Hangfire, along
-          with Windows Services for high-volume file processing and data
-          handling. I have hands-on experience with SAML SSO integrations
-          (PingOne, OneLogin, Okta) and working with enterprise data sources
-          such as SQL Server, AWS S3, and MySQL. In addition, I’ve built
-          internal tools and documentation platforms, including a responsive
-          web-based guide for some of my previous projects. Alongside full stack
-          development, I also work with CRM and automation tools (GHL, HubSpot,
-          Shopify basics), focusing on integrations, workflows, and improving
-          business processes. Overall, I focus on building reliable systems that
-          are secure, scalable, and aligned with real business needs.
+          I’m a Full Stack Developer and Webflow Developer specializing in .NET
+          Core and React (TypeScript), with experience building scalable,
+          secure, and modular web applications for enterprise environments. I
+          also design and develop responsive, CMS-driven websites using Webflow,
+          focusing on clean UI implementation, dynamic content, and performance
+          optimization. I develop feature-based systems based on business
+          requirements, including API integrations, authentication, and
+          real-time applications using SignalR. I also implement background
+          processing and automation using Hangfire, along with Windows Services
+          for high-volume file processing and data handling. I have hands-on
+          experience with SAML SSO integrations (PingOne, OneLogin, Okta) and
+          working with enterprise data sources such as SQL Server, AWS S3, and
+          MySQL. In addition, I’ve built internal tools and documentation
+          platforms, including responsive web-based guides for some of my
+          previous projects. Alongside full stack development, I also work with
+          CRM and automation tools (GHL, HubSpot, Shopify basics), focusing on
+          integrations, workflows, and improving business processes. Overall, I
+          focus on building reliable systems and modern websites that are
+          secure, scalable, and aligned with real business needs.
         </motion.p>
       </section>
 
