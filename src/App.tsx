@@ -6,7 +6,6 @@ import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
 function App() {
   const [showTop, setShowTop] = useState(false);
-  const [triggerRipple, setTriggerRipple] = useState(false);
   const [activeSkill, setActiveSkill] = useState<
     | "all"
     | "frontend"
